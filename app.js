@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/api/v1', api);
 app.use((req, res) => {
     const err = new Error('404 - Not found !!!');
-    err.Status = 500;
+    err.Status = 404;
     res.json({msg: '404 - Not found !!!', err: err})
 });
 
